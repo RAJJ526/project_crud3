@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Make Changes</h1>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <label for="">Name</label>
+        <input type="text" name="name" value="{{obj.name}}"><br>
+        <h6 style="color: red;">{{error.errors.name}}</h6>
+        <label for="">Last Name</label>
+        <input type="text" name="last_name" value="{{obj.last_name}}"><br>
+        <h6 style="color: red;">{{error.errors.last_name}}</h6>
+        <label for="">Date of Birth</label>
+        <input type="text" name="dob" value="{{obj.dob}}"><br>
+        <h6 style="color: red;">{{error.errors.dob}}</h6>
+        <label for="">Aadhar Card No</label>
+        <input type="number" name="aadhar_no" value="{{obj.aadhar_no}}"><br>
+        <h6 style="color: red;">{{error.errors.aadhar_no}}</h6>
+        <label for="">Name</label>
+        <input type="number" name="mobile_no" value="{{obj.mobile_no}}"><br>
+        <h6 style="color: red;">{{error.errors.mobile_no}}</h6>
+        <button type="submit">update</button>
+
+    </form>
+</body>
+</html>
